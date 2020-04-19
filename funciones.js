@@ -1,5 +1,10 @@
 window.onload = function() {
-    var xhr = new XMLHttpRequest();
+    let boton = document.getElementById('boton');
+    boton.addEventListener('click', cargaDatos);
+}
+
+function cargaDatos() {
+    xhr = new XMLHttpRequest();
     xhr.open("GET", "https://reqres.in/api/users", true);
     console.log("Estado de la petición " + xhr.status);
     xhr.onload = function(){
@@ -8,7 +13,7 @@ window.onload = function() {
         var datos = JSON.parse(xhr.responseText);
         console.log(datos.data);
         let ul = document.getElementById('listado');
-        for (var i=0;i<=datos.data.length;i++) {
+        for (var i=0;i<datos.data.length;i++) {
             console.log(datos.data[i].first_name);
             li = document.createElement('li');
             txt = document.createTextNode(datos.data[i].first_name);
@@ -18,4 +23,3 @@ window.onload = function() {
     };
     xhr.send();
 }
-
