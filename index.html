@@ -7,12 +7,19 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-<h1>Primer ejercicio con AJAX</h1>
-<button onclick="cargaDatos()">Cargar los datos</button>
-<div id="verDatos">
-    <h3 id="subtitulo">Datos del usuario</h3>
-    <p id="nombre"></p>
-    <img src="" alt="avatar" id="avatar">
+<h1 class="container bg-light">Primer ejercicio con AJAX</h1>
+<div class="container">
+    <button class="btn btn-success mx-auto" onclick="cargaDatos()">Cargar los datos</button>
+    <div id="verDatos" class="card text-center" style="width: 18rem">
+        <div class="card-header">
+            <h3 id="subtitulo" class="card-title">Datos del usuario</h3>
+        </div>
+        <div class="card-body">
+            <p id="nombre" class="card-subtitle text-uppercase"></p>
+            <img src="" alt="avatar" id="avatar" class="card-img-bottom">
+        </div>
+    </div>
 </div>
+
 </body>
 </html>

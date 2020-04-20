@@ -14,8 +14,8 @@ function cargaDatos() {
         var subtitulo = document.getElementById('subtitulo');
         var nombre = document.getElementById('nombre');
         var avatar = document.getElementById('avatar');
-        subtitulo.innerText += " " + datos.data.id;
-        nombre.innerText += datos.data.first_name + " " + datos.data.last_name;
+        subtitulo.innerText = "Datos del usuario: " + datos.data.id;
+        nombre.innerText = datos.data.first_name + " " + datos.data.last_name;
         avatar.src = datos.data.avatar;
     };
     // Método para enviar la petición al servidor
